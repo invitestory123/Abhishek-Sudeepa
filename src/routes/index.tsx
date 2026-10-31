@@ -9,9 +9,9 @@ import { Footer } from "@/components/wedding/Footer";
 import { Opener } from "@/components/wedding/Opener";
 import { ScrollProgress } from "@/components/wedding/ScrollProgress";
 
-const title = "Abhishek & Sudeepa · 25–26 November 2026, Chandrapur";
+const title = "Abhishek & Sudeepa · 26 November 2026, Chandrapur";
 const description =
-  "Together with their families, Abhishek and Sudeepa invite you to celebrate their wedding on 25th & 26th November 2026 at Hotel Blue Paradise, Chandrapur, Maharashtra.";
+  "Together with their families, Abhishek and Sudeepa invite you to celebrate their wedding on 26th November 2026 at Hotel Blue Paradise, Chandrapur, Maharashtra.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

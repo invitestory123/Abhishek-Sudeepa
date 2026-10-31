@@ -93,7 +93,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.15, duration: 0.9 }}
-            className="text-ivory mt-5 text-sm sm:text-base font-medium tracking-[0.35em] uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+            className="text-ivory mt-5 text-sm sm:text-base font-medium tracking-[0.25em] uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
           >
             {wedding.heroDateLabel}
           </motion.p>

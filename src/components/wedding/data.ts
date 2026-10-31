@@ -28,7 +28,7 @@ export const wedding = {
   weddingDateISO: "2026-11-26T18:00:00+05:30",
   endISO: "2026-11-26T23:59:00+05:30",
   dateLabel: "25 & 26 November 2026",
-  heroDateLabel: "25 · 26 · 11 · 2026",
+  heroDateLabel: "26th November 2026",
   cityState: "Chandrapur, Maharashtra",
   events: [
     {
