@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Hero } from "@/components/wedding/Hero";
 import { Couple } from "@/components/wedding/Couple";
 import { Countdown } from "@/components/wedding/Countdown";
@@ -8,6 +8,7 @@ import { EventDetails } from "@/components/wedding/EventDetails";
 import { Footer } from "@/components/wedding/Footer";
 import { Opener } from "@/components/wedding/Opener";
 import { ScrollProgress } from "@/components/wedding/ScrollProgress";
+import { MusicPlayer, MusicPlayerHandle } from "@/components/wedding/MusicPlayer";
 
 const title = "Abhishek & Sudeepa · 26 November 2026, Chandrapur";
 const description =
@@ -29,6 +30,7 @@ export const Route = createFileRoute("/")({
 
 function Invitation() {
   const [opened, setOpened] = useState(false);
+  const musicRef = useRef<MusicPlayerHandle>(null);
 
   useEffect(() => {
     document.body.style.overflow = opened ? "" : "hidden";
@@ -39,8 +41,16 @@ function Invitation() {
 
   return (
     <>
+      <MusicPlayer ref={musicRef} />
+
       <AnimatePresence>
-        {!opened && <Opener key="opener" onOpen={() => setOpened(true)} />}
+        {!opened && (
+          <Opener
+            key="opener"
+            onStartOpen={() => musicRef.current?.play()}
+            onOpen={() => setOpened(true)}
+          />
+        )}
       </AnimatePresence>
 
       {opened && <ScrollProgress />}

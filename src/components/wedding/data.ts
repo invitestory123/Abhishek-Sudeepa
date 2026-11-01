@@ -29,7 +29,13 @@ export const wedding = {
   endISO: "2026-11-26T23:59:00+05:30",
   dateLabel: "25 & 26 November 2026",
   heroDateLabel: "26th November 2026",
+  heroImage: "/images/opening-couple.jpg",
   cityState: "Chandrapur, Maharashtra",
+  music: {
+    title: "Kudmayi",
+    artist: "Rocky Aur Rani Kii Prem Kahaani",
+    src: "/audio/wedding-music.m4a",
+  },
   events: [
     {
       title: "Aashirwad",

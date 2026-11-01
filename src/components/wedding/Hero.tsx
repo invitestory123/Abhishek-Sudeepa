@@ -107,17 +107,23 @@ export function Hero() {
           </motion.p>
         </motion.div>
 
-        <motion.img
-          src="/images/couple-hero.png"
-          alt="Watercolour illustration of the couple"
-          width={1024}
-          height={1408}
-          initial={{ opacity: 0, y: 40, scale: 0.96 }}
+        <motion.div
+          initial={{ opacity: 0, y: 35, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ delay: 0.7, duration: 1.3, ease: [0.22, 1, 0.36, 1] }}
           style={{ y: coupleY, scale: coupleScale }}
-          className="mt-auto w-[88%] max-w-[340px] brightness-110 contrast-105 drop-shadow-[0_24px_40px_rgba(0,0,0,0.4)]"
-        />
+          className="mt-6 mb-6 w-[88%] max-w-[340px] aspect-square overflow-hidden rounded-t-[4.5rem] rounded-b-3xl border-2 border-gold/60 shadow-2xl ring-4 ring-gold/25 relative"
+        >
+          <img
+            src="/images/opening-couple.jpg"
+            alt={`${wedding.groom.name} & ${wedding.bride.name}`}
+            width={1024}
+            height={1024}
+            loading="eager"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-emerald-ink/35 via-transparent to-transparent pointer-events-none" />
+        </motion.div>
       </div>
 
       <motion.div
